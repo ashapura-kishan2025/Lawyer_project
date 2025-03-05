@@ -1,0 +1,15 @@
+.bg-menu-theme {
+  background-color: #192B53 !important;
+}
+
+.bg-menu-theme.menu-horizontal {
+  background-color: #B08E78 !important;
+}
+
+.card.card-border-shadow-primary:hover::after{
+  border-bottom-color: #7367f0 !important ;
+}
+
+.card.card-border-shadow-primary::after{
+  border-bottom-color: #7367f0 !important;
+}

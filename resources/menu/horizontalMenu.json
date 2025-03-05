@@ -1,0 +1,65 @@
+{
+  "menu": [
+    {
+      "url": "dashboard",
+      "name": "Dashboard",
+      "icon": "fa fa-tachometer-alt me-2",
+      "slug": "dashboard"
+    },
+    {
+      "url": "client",
+      "name": "Clients",
+      "icon": "fa-solid fa-user-group me-2",
+      "slug": "client"
+    },
+    {
+      "url": "quotes",
+      "name": "Quotations",
+      "icon": "fa-regular fa-file-lines me-2",
+      "slug": "quotes"
+    },
+    {
+      "url": "assignment",
+      "name": "Assignments",
+      "icon": "fa-solid fa-briefcase me-2",
+      "slug": "assignment"
+    },
+    {
+      "name": "Master",
+      "slug": "master",
+      "icon": "fa-solid fa-bars me-2",
+      "submenu": [
+        {
+          "url": "departments",
+          "name": "Departments",
+          "icon": "fa-solid fa-sitemap me-2",
+          "slug": "departments"
+        },
+        {
+          "url": "user",
+          "name": "Users",
+          "icon": "fa-solid fa-circle-user me-2",
+          "slug": "user"
+        },
+        {
+          "url": "currencies",
+          "name": "Currencies",
+          "icon": "fa fa-solid fa-dollar-sign me-2",
+          "slug": "currencies"
+        },
+        {
+          "url": "country",
+          "name": "Countries",
+          "icon": "fa fa-solid fa-earth-europe me-2",
+          "slug": "country"
+        },
+        {
+          "url": "permissions",
+          "name": "Permissions",
+          "icon": "fa fa-user-shield me-2",
+          "slug": "permissions"
+        }
+      ]
+    }
+  ]
+}

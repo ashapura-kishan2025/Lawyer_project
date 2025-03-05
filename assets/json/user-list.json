@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "department": "Roxin ",
+      "description": "This is description ",
+      "status": "0",
+      "action": "<button>Edit</button>"
+    },
+    {
+      "id": 2,
+      "department": "Galen Slixby",
+      "description": "This is description ",
+      "status": "0",
+      "action": "<button>Edit</button>"
+    },
+    {
+      "id": 3,
+      "department": "Caren goblin",
+      "description": "This is description ",
+      "status": "0",
+      "action": "<button>Edit</button>"
+    },
+    {
+      "id": 4,
+      "department": "Rose Rossy",
+      "description": "This is description ",
+      "status": "0",
+      "action": "<button>Edit</button>"
+    },
+    {
+      "id": 5,
+      "department": "Robert Joseph",
+      "description": "This is description ",
+      "status": "0",
+      "action": "<button>Edit</button>"
+    }
+  ]
+}

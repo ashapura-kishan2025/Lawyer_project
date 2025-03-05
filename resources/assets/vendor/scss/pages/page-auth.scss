@@ -1,0 +1,168 @@
+// * Authentication
+// *******************************************************************************
+
+@use '../_bootstrap-extended/include' as light;
+@use '../_bootstrap-extended/include-dark' as dark;
+@import '../_custom-variables/pages';
+
+$authentication-1-inner-max-width: 95% !default;
+
+// .authentication-inner{
+//   width: 90vw;
+//   height: 90vh;
+// }
+
+// .login-card{
+//   width: 70%;
+//   height: 50%;
+// }
+
+.login-banner-img{
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.login-button{
+  background-color: #192b53 !important;
+  color: White !important;
+}
+.login-button:hover{
+  background-color: #0c3388 !important;
+  color: White !important;
+}
+
+.welcome-txt{
+  color: #5589e6;
+}
+
+
+.authentication-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  min-height: 100vh;
+  min-width: 100%;
+
+  .authentication-inner {
+    width: 100%;
+  }
+
+  &.authentication-basic {
+    align-items: center;
+    justify-content: center;
+    .card-body {
+      padding: 3rem;
+      @include light.media-breakpoint-down(sm) {
+        padding: 2rem;
+      }
+    }
+  }
+
+  &.authentication-cover {
+    align-items: flex-start;
+    .authentication-inner {
+      height: 100%;
+      margin: auto 0;
+
+      @include light.media-breakpoint-down(lg) {
+        height: 100vh;
+      }
+      // authentication cover background styles
+      .auth-cover-bg {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+
+        // authentication cover illustration height
+        .auth-illustration {
+          max-height: 65%;
+          max-width: 65%;
+          z-index: 1;
+        }
+      }
+
+      // authentication cover platform bg styles
+      .platform-bg {
+        position: absolute;
+        width: 100%;
+        bottom: 0%;
+        left: 0%;
+        height: 35%;
+      }
+
+      // authentication multisteps styles
+      .auth-multisteps-bg-height {
+        height: 100vh;
+
+        // z-index for illustration
+        & > img:first-child {
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  // For two-steps auth
+  .auth-input-wrapper .auth-input {
+    max-width: 50px;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    font-size: light.$large-font-size;
+  }
+}
+
+// authentication multisteps responsive styles
+@media (max-height: 636px) {
+  .auth-multisteps-bg-height {
+    height: 100% !important;
+  }
+}
+
+// Two-steps auth responsive style
+@include light.media-breakpoint-down(sm) {
+  .authentication-wrapper {
+    .auth-input-wrapper .auth-input {
+      font-size: light.$h5-font-size;
+    }
+  }
+}
+
+// Two Steps Verification
+// ? Used for validation specific style as we have validated hidden field
+#twoStepsForm {
+  .fv-plugins-bootstrap5-row-invalid .form-control {
+    border-color: light.$form-feedback-invalid-color;
+    border-width: light.$input-focus-border-width;
+  }
+}
+@include light.media-breakpoint-down(sm) {
+  .numeral-mask-wrapper .numeral-mask {
+    padding: 0 !important;
+  }
+  .numeral-mask {
+    margin-inline: 1px !important;
+  }
+}
+
+// Light Layout
+@if $enable-light-style {
+  .light-style {
+    .authentication-wrapper .authentication-bg {
+      background-color: light.$white;
+    }
+    .auth-cover-bg-color {
+      background-color: light.$body-bg;
+    }
+  }
+}
+
+// Dark Layout
+@if $enable-dark-style {
+  .dark-style {
+    .authentication-wrapper .authentication-bg {
+      background-color: dark.$card-bg;
+    }
+    .auth-cover-bg-color {
+      background-color: dark.$body-bg;
+    }
+  }
+}
